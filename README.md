@@ -1,6 +1,18 @@
 # 🌱 CALI VERDE - MVP Huertas Comunitarias
 
+[![GitHub Pages](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://juanse22.github.io/Huertas/)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+
 Plataforma web para conectar y visibilizar huertas comunitarias en Cali, Colombia.
+
+---
+
+## 🚀 Demo en Vivo
+
+### **Repositorio GitHub:**
+👉 [https://github.com/juanse22/Huertas](https://github.com/juanse22/Huertas)
+
+> ⚠️ **Nota importante:** Este proyecto usa PHP + SQLite/MySQL, por lo que **NO puede ejecutarse completamente en GitHub Pages** (solo HTML estático). Para ver la aplicación funcionando, sigue las instrucciones de instalación local o usa hosting PHP gratuito.
 
 ## 🎯 Objetivo del MVP
 
