@@ -1,0 +1,37 @@
+# Base de datos SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# Archivos de configuración local
+config.local.php
+.env
+.env.local
+
+# Directorios de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos temporales
+*.tmp
+*.temp
+
+# Directorio de uploads (mantener estructura pero no archivos)
+uploads/*
+!uploads/.gitkeep
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node modules (si usas herramientas de build)
+node_modules/
+
+# Composer (si usas PHP Composer)
+vendor/

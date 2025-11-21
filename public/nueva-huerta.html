@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Huerta - Cali Verde</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🌱</span>
+                <h1>Cali Verde</h1>
+            </div>
+            <nav>
+                <a href="index.html">Inicio</a>
+                <a href="huertas.html">Ver Huertas</a>
+                <a href="nueva-huerta.html" class="active">Registrar Huerta</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Formulario -->
+    <section class="form-section">
+        <div class="container-small">
+            <h2>Registrar Nueva Huerta</h2>
+            <p class="form-intro">Completa el formulario para agregar tu huerta a la red de Cali Verde</p>
+
+            <form id="huertaForm" class="huerta-form">
+                <!-- Información Básica -->
+                <fieldset>
+                    <legend>📋 Información Básica</legend>
+                    
+                    <div class="form-group">
+                        <label for="nombre">Nombre de la Huerta <span class="required">*</span></label>
+                        <input type="text" id="nombre" name="nombre" required 
+                               placeholder="Ej: Huerta Comunitaria San Antonio">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="responsable">Responsable</label>
+                        <input type="text" id="responsable" name="responsable" 
+                               placeholder="Nombre del coordinador/a">
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="barrio">Barrio</label>
+                            <input type="text" id="barrio" name="barrio" 
+                                   placeholder="Ej: San Antonio">
+                        </div>
+                        <div class="form-group">
+                            <label for="tipo">Tipo de Huerta</label>
+                            <select id="tipo" name="tipo">
+                                <option value="comunitaria">Comunitaria</option>
+                                <option value="escolar">Escolar</option>
+                                <option value="familiar">Familiar</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="direccion">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" 
+                               placeholder="Calle y número">
+                    </div>
+                </fieldset>
+
+                <!-- Ubicación -->
+                <fieldset>
+                    <legend>📍 Ubicación</legend>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="lat">Latitud <span class="required">*</span></label>
+                            <input type="number" id="lat" name="lat" step="0.000001" 
+                                   required placeholder="3.448889">
+                            <small>Rango válido: 3.0 a 4.0</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="lng">Longitud <span class="required">*</span></label>
+                            <input type="number" id="lng" name="lng" step="0.000001" 
+                                   required placeholder="-76.531944">
+                            <small>Rango válido: -77.0 a -76.0</small>
+                        </div>
+                    </div>
+
+                    <div class="help-text">
+                        💡 Puedes obtener coordenadas en <a href="https://www.google.com/maps" target="_blank">Google Maps</a>: 
+                        clic derecho → "¿Qué hay aquí?" → copia las coordenadas
+                    </div>
+                </fieldset>
+
+                <!-- Prácticas -->
+                <fieldset>
+                    <legend>🌿 Prácticas Agroecológicas</legend>
+                    
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="practicas" value="agroecológica" checked>
+                            <span>Agricultura Agroecológica</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="practicas" value="compostaje">
+                            <span>Compostaje</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="practicas" value="riego por goteo">
+                            <span>Riego por Goteo</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="practicas" value="captación de lluvia">
+                            <span>Captación de Lluvia</span>
+                        </label>
+                    </div>
+                </fieldset>
+
+                <!-- Contacto -->
+                <fieldset>
+                    <legend>📞 Contacto</legend>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="contacto_tel">Teléfono</label>
+                            <input type="tel" id="contacto_tel" name="contacto_tel" 
+                                   placeholder="3201234567">
+                        </div>
+                        <div class="form-group">
+                            <label for="contacto_email">Email</label>
+                            <input type="email" id="contacto_email" name="contacto_email" 
+                                   placeholder="huerta@ejemplo.com">
+                        </div>
+                    </div>
+                </fieldset>
+
+                <!-- Fotos -->
+                <fieldset>
+                    <legend>📷 Fotos (Opcional)</legend>
+                    
+                    <div class="form-group">
+                        <label for="fotos">URLs de fotos (una por línea)</label>
+                        <textarea id="fotos" name="fotos" rows="3" 
+                                  placeholder="uploads/mi_huerta_1.jpg&#10;uploads/mi_huerta_2.jpg"></textarea>
+                        <small>Nota: Para el MVP, ingresa rutas de ejemplo. En producción se implementará subida real.</small>
+                    </div>
+                </fieldset>
+
+                <!-- Botones -->
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary btn-large">
+                        ✅ Registrar Huerta
+                    </button>
+                    <a href="huertas.html" class="btn-secondary">Cancelar</a>
+                </div>
+
+                <!-- Mensaje de resultado -->
+                <div id="formMessage" class="form-message" style="display: none;"></div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Cali Verde</p>
+        </div>
+    </footer>
+
+    <script src="js/form.js"></script>
+</body>
+</html>

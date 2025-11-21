@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cali Verde - Huertas Comunitarias</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🌱</span>
+                <h1>Cali Verde</h1>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Inicio</a>
+                <a href="huertas.html">Ver Huertas</a>
+                <a href="nueva-huerta.html" class="btn-primary">Registrar Huerta</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Conectando huertas comunitarias en Cali</h2>
+                <p class="hero-subtitle">Una plataforma para visibilizar, conectar y fortalecer las iniciativas de agricultura urbana en nuestra ciudad.</p>
+                
+                <!-- Problema → Solución -->
+                <div class="value-props">
+                    <div class="prop-card">
+                        <span class="prop-icon">🏙️</span>
+                        <h3>Problema</h3>
+                        <p>Las huertas urbanas están aisladas y tienen poca visibilidad en la comunidad.</p>
+                    </div>
+                    <div class="prop-card">
+                        <span class="prop-icon">🤝</span>
+                        <h3>Solución</h3>
+                        <p>Conectamos huertas, compartimos conocimiento y fortalecemos la red de agricultura urbana.</p>
+                    </div>
+                    <div class="prop-card">
+                        <span class="prop-icon">🌍</span>
+                        <h3>Impacto</h3>
+                        <p>Promovemos seguridad alimentaria, educación ambiental y comunidades sostenibles.</p>
+                    </div>
+                </div>
+
+                <!-- CTA Principal -->
+                <div class="cta-section">
+                    <a href="nueva-huerta.html" class="btn-cta">
+                        <span>✨</span> Registrar Mi Huerta
+                    </a>
+                    <a href="huertas.html" class="btn-secondary">Ver Mapa de Huertas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" id="totalHuertas">0</div>
+                    <div class="stat-label">Huertas Registradas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalBarrios">0</div>
+                    <div class="stat-label">Barrios con Huertas</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Agroecológico</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Cali Verde - MVP | Huertas Comunitarias de Cali</p>
+            <p>Proyecto educativo - Universidad del Valle</p>
+        </div>
+    </footer>
+
+    <script>
+        // Cargar estadísticas
+        fetch('api/huertas.php')
+            .then(res => res.json())
+            .then(huertas => {
+                document.getElementById('totalHuertas').textContent = huertas.length;
+                const barrios = new Set(huertas.map(h => h.barrio).filter(Boolean));
+                document.getElementById('totalBarrios').textContent = barrios.size;
+            })
+            .catch(err => console.error('Error al cargar stats:', err));
+    </script>
+</body>
+</html>

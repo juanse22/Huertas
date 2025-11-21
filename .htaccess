@@ -1,0 +1,23 @@
+# Configuración Apache para reescritura de URLs
+# Habilita routing limpio para la API
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Redirigir /api/huertas/123 a /api/huertas.php/123
+    RewriteRule ^api/huertas/([0-9]+)$ api/huertas.php/$1 [L,QSA]
+    
+    # CORS headers
+    Header always set Access-Control-Allow-Origin "*"
+    Header always set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header always set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
+
+# Protección de directorios
+Options -Indexes
+
+# Tipos MIME
+<IfModule mod_mime.c>
+    AddType application/json .json
+</IfModule>

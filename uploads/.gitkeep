@@ -1,0 +1,3 @@
+# Directorio para almacenar fotos subidas
+# (Para el MVP, se usan rutas de ejemplo)
+# En producción, implementar upload con move_uploaded_file()
