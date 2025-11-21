@@ -257,4 +257,48 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (filterTipo) filterTipo.addEventListener('change', applyFilters);
     if (filterBarrio) filterBarrio.addEventListener('change', applyFilters);
+    
+    // Event listener para formulario de registro
+    const registroForm = document.getElementById('registroForm');
+    if (registroForm) {
+        registroForm.addEventListener('submit', handleRegistro);
+    }
 });
+
+/**
+ * Maneja el envío del formulario de registro
+ */
+function handleRegistro(e) {
+    e.preventDefault();
+    
+    const mensaje = document.getElementById('mensaje');
+    const formData = {
+        nombre: document.getElementById('nombre').value,
+        responsable: document.getElementById('responsable').value,
+        barrio: document.getElementById('barrio').value,
+        telefono: document.getElementById('telefono').value,
+        tipo: document.getElementById('tipo').value
+    };
+    
+    // Simular registro exitoso
+    mensaje.style.display = 'block';
+    mensaje.style.background = '#d4edda';
+    mensaje.style.color = '#155724';
+    mensaje.style.border = '1px solid #c3e6cb';
+    mensaje.innerHTML = `
+        ✅ ¡Gracias ${formData.responsable}!<br>
+        Tu huerta "${formData.nombre}" será validada y agregada al mapa pronto.
+    `;
+    
+    // Limpiar formulario
+    e.target.reset();
+    
+    // Scroll al mensaje
+    mensaje.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    
+    // Ocultar mensaje después de 5 segundos
+    setTimeout(() => {
+        mensaje.style.display = 'none';
+    }, 5000);
+}
+
