@@ -1,0 +1,147 @@
+/**
+ * CALI VERDE - Datos estáticos para demo de GitHub Pages
+ * 10 huertas en barrios de Cali
+ */
+
+const HUERTAS_DATA = [
+    {
+        id: 1,
+        nombre: "Huerta Comunitaria San Antonio",
+        responsable: "María López González",
+        barrio: "San Antonio",
+        direccion: "Calle 1 Oeste #3-45",
+        lat: 3.448889,
+        lng: -76.531944,
+        tipo: "comunitaria",
+        practicas: ["agroecológica", "compostaje", "riego por goteo"],
+        contacto_tel: "3201234567",
+        contacto_email: "huerta.sanantonio@gmail.com",
+        fotos: []
+    },
+    {
+        id: 2,
+        nombre: "Huerta Escolar Niños de San Nicolás",
+        responsable: "Pedro Ramírez Soto",
+        barrio: "San Nicolás",
+        direccion: "Carrera 4 #2-34",
+        lat: 3.452222,
+        lng: -76.533889,
+        tipo: "escolar",
+        practicas: ["agroecológica", "captación de lluvia"],
+        contacto_tel: "3157654321",
+        contacto_email: "escuela.sannicolas@edu.co",
+        fotos: []
+    },
+    {
+        id: 3,
+        nombre: "Siloé Verde - Huerta Loma de la Cruz",
+        responsable: "Ana Lucía Martínez",
+        barrio: "Siloé",
+        direccion: "Calle 5B #34-12, Loma de la Cruz",
+        lat: 3.411111,
+        lng: -76.555556,
+        tipo: "comunitaria",
+        practicas: ["agroecológica", "compostaje", "captación de lluvia"],
+        contacto_tel: "3209876543",
+        contacto_email: "siloe.verde@hotmail.com",
+        fotos: []
+    },
+    {
+        id: 4,
+        nombre: "Huerta Familiar Los Girasoles",
+        responsable: "Carlos Hernández",
+        barrio: "Aguablanca",
+        direccion: "Calle 52 #3H-21",
+        lat: 3.417778,
+        lng: -76.486111,
+        tipo: "familiar",
+        practicas: ["agroecológica", "riego por goteo"],
+        contacto_tel: "3186547890",
+        contacto_email: "carlos.huertas@outlook.com",
+        fotos: []
+    },
+    {
+        id: 5,
+        nombre: "Jardín Comunitario El Ingenio",
+        responsable: "Luz Dary Ospina",
+        barrio: "El Ingenio",
+        direccion: "Carrera 100 #18-45",
+        lat: 3.368333,
+        lng: -76.513333,
+        tipo: "comunitaria",
+        practicas: ["agroecológica", "compostaje", "riego por goteo", "captación de lluvia"],
+        contacto_tel: "3204561234",
+        contacto_email: "ingenio.verde@gmail.com",
+        fotos: []
+    },
+    {
+        id: 6,
+        nombre: "Huerta La Flora - Semillas de Esperanza",
+        responsable: "Jorge Alberto Muñoz",
+        barrio: "La Flora",
+        direccion: "Calle 70 #8C-12",
+        lat: 3.402222,
+        lng: -76.521111,
+        tipo: "comunitaria",
+        practicas: ["agroecológica", "compostaje"],
+        contacto_tel: "3178889999",
+        contacto_email: "laflora.huerta@yahoo.com",
+        fotos: []
+    },
+    {
+        id: 7,
+        nombre: "Huerta Escolar Terrón Colorado",
+        responsable: "Sandra Milena Gómez",
+        barrio: "Terrón Colorado",
+        direccion: "Carrera 1J #70-23",
+        lat: 3.393889,
+        lng: -76.505000,
+        tipo: "escolar",
+        practicas: ["agroecológica", "riego por goteo"],
+        contacto_tel: "3165554321",
+        contacto_email: "terron.escuela@edu.co",
+        fotos: []
+    },
+    {
+        id: 8,
+        nombre: "Huerta Comunitaria Alfonso López",
+        responsable: "Roberto García Díaz",
+        barrio: "Alfonso López",
+        direccion: "Calle 33 #2E-56",
+        lat: 3.410000,
+        lng: -76.497778,
+        tipo: "comunitaria",
+        practicas: ["agroecológica", "compostaje", "captación de lluvia"],
+        contacto_tel: "3192223344",
+        contacto_email: "alfonso.huerta@comunidad.org",
+        fotos: []
+    },
+    {
+        id: 9,
+        nombre: "Huerta Familiar Meléndez Verde",
+        responsable: "Diana Patricia Rojas",
+        barrio: "Meléndez",
+        direccion: "Carrera 98 #16-34",
+        lat: 3.365000,
+        lng: -76.528889,
+        tipo: "familiar",
+        practicas: ["agroecológica", "riego por goteo"],
+        contacto_tel: "3173334455",
+        contacto_email: "melendez.verde@gmail.com",
+        fotos: []
+    },
+    {
+        id: 10,
+        nombre: "Huerta Valle del Lili - Raíces Urbanas",
+        responsable: "Miguel Ángel Torres",
+        barrio: "Valle del Lili",
+        direccion: "Calle 16 #100-23",
+        lat: 3.356667,
+        lng: -76.518889,
+        tipo: "comunitaria",
+        practicas: ["agroecológica", "compostaje", "riego por goteo"],
+        contacto_tel: "3208887766",
+        contacto_email: "vallelili.raices@hotmail.com",
+        fotos: []
+    }
+];

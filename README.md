@@ -345,7 +345,6 @@ Para dudas o problemas:
 
 ## 📜 Licencia
 
-Proyecto educativo - Universidad del Valle  
 © 2025 Cali Verde - Todos los derechos reservados
 
 ---
